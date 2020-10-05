@@ -1,8 +1,25 @@
 {% extends 'main/wrapper.html' %}
 
 
-{% block title %}Главная страница{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-    <h1>Hollo world</h1>
+    <div class = "features">
+        <h1>{{ title }}</h1>
+        <p>dkjfkdjfk jkdjfkj kdjk jdkjkdjfkjdf</p>
+        <button class="btn btn-warning">fjkkdjfk </button>
+
+
+        {% for el in values %}
+            {% if el == 'Hello' %}
+                <p>{{ el }}</p>
+            {% endif %}
+        {% endfor %}
+
+        {{ obj.age }}
+
+        {% for el in obj %}
+            <p>{{ el }}</p>
+        {% endfor %}
+    </div>
 {% endblock %}
